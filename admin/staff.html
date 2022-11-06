@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vie-Cuog | WebDev</title>
+    <link rel="stylesheet" href="../admin/css/staff.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Nunito+Sans:wght@400;600;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="../admin/img/logoBK.png" alt="">
+            <h2>HCMUT</h2>
+        </div>
+        <ul class="items">
+            <li><i class="fa-solid fa-gauge"></i><a href="../admin/dashboard.html">Dashboard</a></li>
+            <li><i class="fa-regular fa-user"></i><a href="../admin/staff.html">Staff List</a></li>
+            <li><i class="fa-regular fa-clock"></i><a href="../admin/attendance.html">Attendance</a></li>
+            <li><i class="fa-regular fa-file-lines"></i><a href="../admin/report.html">Attendance Report</a></li>
+        </ul>
+    </section>
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+            <div class="n2">
+                <div class="notification" onclick="toggleNotifi()">
+                    <div class="notification-icon">
+                        <i class="fa-solid fa-bell"></i>
+                        <span>17</span>
+                    </div>
+                    <div class="notification-box" id="list-notifi">
+                        <h3>Notifications <span>17</span></h3>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account" onclick="toggleAcc()">
+                    <div class="account-avatar">
+                        <img src="../admin/img/quinhon.jpg" alt="">
+                    </div>
+                    <div class="account-box" id="list-acc">
+                        <div class="profile">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="info">
+                                <h3>Viet Cuong</h3>
+                                <p>@webdev</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">
+                            <i class="fa-solid fa-plus"></i>
+                            Add profile
+                        </a>
+                        <ul class="function">
+                            <li>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <a href="#">Edit profile</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-gears"></i>
+                                <a href="#">Setting</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <a href="#">Account</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-question"></i>
+                                <a href="#">Help</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <a href="#">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="i-name">Staff List</h3>   
+
+        <div class="tool-board">
+            <ul class="print"> 
+                <li><a href="#">CSV</a></li>
+                <li><a href="#">PDF</a></li>
+                <li><a href="#">PRINT</a></li>
+            </ul>
+            <div class="btn-add">
+                <i class="fa-solid fa-plus"></i>
+                <a href="../admin/addstaff.html">New Employee</a>
+            </div>
+        </div>
+
+        <div class="search-table">
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search" size="10">           
+            </div>
+        </div>
+        
+        <div class="board">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Date of birth</td>
+                        <td>Email</td>
+                        <td>ID Worker</td>
+                        <td>Department</td>
+                        <td>Position</td>
+                        <td>Date of employment</td>
+                        <td>Address</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="name">           
+                            <h5>Ho Viet Cuong</h5>
+                        </td>
+                        <td class="birth">
+                            <p>18/03/2001</p>
+                        </td>
+                        <td class="email">
+                            <p>cuong.ho1912820@hcmut.edu.vn</p>
+                        </td>
+                        <td class="id">
+                            <p>1912820</p>
+                        </td>
+                        <td class="depart">
+                            <p>Software</p>
+                        </td>
+                        <td class="position">
+                            <p>Web developer</p>
+                        </td>
+                        <td class="date">
+                            <p>14-10-2022</p>
+                        </td>
+                        <td class="address">
+                            <p>Viet Nam</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="name">           
+                            <h5>Ho Viet Cuong</h5>
+                        </td>
+                        <td class="birth">
+                            <p>18/03/2001</p>
+                        </td>
+                        <td class="email">
+                            <p>cuong.ho1912820@hcmut.edu.vn</p>
+                        </td>
+                        <td class="id">
+                            <p>1912820</p>
+                        </td>
+                        <td class="depart">
+                            <p>Software</p>
+                        </td>
+                        <td class="position">
+                            <p>Web developer</p>
+                        </td>
+                        <td class="date">
+                            <p>14-10-2022</p>
+                        </td>
+                        <td class="address">
+                            <p>Viet Nam</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="name">           
+                            <h5>Ho Viet Cuong</h5>
+                        </td>
+                        <td class="birth">
+                            <p>18/03/2001</p>
+                        </td>
+                        <td class="email">
+                            <p>cuong.ho1912820@hcmut.edu.vn</p>
+                        </td>
+                        <td class="id">
+                            <p>1912820</p>
+                        </td>
+                        <td class="depart">
+                            <p>Software</p>
+                        </td>
+                        <td class="position">
+                            <p>Web developer</p>
+                        </td>
+                        <td class="date">
+                            <p>14-10-2022</p>
+                        </td>
+                        <td class="address">
+                            <p>Viet Nam</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="name">           
+                            <h5>Ho Viet Cuong</h5>
+                        </td>
+                        <td class="birth">
+                            <p>18/03/2001</p>
+                        </td>
+                        <td class="email">
+                            <p>cuong.ho1912820@hcmut.edu.vn</p>
+                        </td>
+                        <td class="id">
+                            <p>1912820</p>
+                        </td>
+                        <td class="depart">
+                            <p>Software</p>
+                        </td>
+                        <td class="position">
+                            <p>Web developer</p>
+                        </td>
+                        <td class="date">
+                            <p>14-10-2022</p>
+                        </td>
+                        <td class="address">
+                            <p>Viet Nam</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="name">           
+                            <h5>Ho Viet Cuong</h5>
+                        </td>
+                        <td class="birth">
+                            <p>18/03/2001</p>
+                        </td>
+                        <td class="email">
+                            <p>cuong.ho1912820@hcmut.edu.vn</p>
+                        </td>
+                        <td class="id">
+                            <p>1912820</p>
+                        </td>
+                        <td class="depart">
+                            <p>Software</p>
+                        </td>
+                        <td class="position">
+                            <p>Web developer</p>
+                        </td>
+                        <td class="date">
+                            <p>14-10-2022</p>
+                        </td>
+                        <td class="address">
+                            <p>Viet Nam</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+    </section>
+    <script src="../admin/js/main.js"></script>
+</body>
+</html>

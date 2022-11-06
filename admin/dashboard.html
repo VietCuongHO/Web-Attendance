@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vie-Cuog | WebDev</title>
+    <link rel="stylesheet" href="../admin/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Nunito+Sans:wght@400;600;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="../admin/img/logoBK.png" alt="">
+            <h2>HCMUT</h2>
+        </div>
+        <ul class="items">
+            <li><i class="fa-solid fa-gauge"></i><a href="../admin/dashboard.html">Dashboard</a></li>
+            <li><i class="fa-regular fa-user"></i><a href="../admin/staff.html">Staff List</a></li>
+            <li><i class="fa-regular fa-clock"></i><a href="../admin/attendance.html">Attendance</a></li>
+            <li><i class="fa-regular fa-file-lines"></i><a href="../admin/report.html">Attendance Report</a></li>
+        </ul>
+    </section>
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+            <div class="n2">
+                <div class="notification" onclick="toggleNotifi()">
+                    <div class="notification-icon">
+                        <i class="fa-solid fa-bell"></i>
+                        <span>17</span>
+                    </div>
+                    <div class="notification-box" id="list-notifi">
+                        <h3>Notifications <span>17</span></h3>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account" onclick="toggleAcc()">
+                    <div class="account-avatar">
+                        <img src="../admin/img/quinhon.jpg" alt="">
+                    </div>
+                    <div class="account-box" id="list-acc">
+                        <div class="profile">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="info">
+                                <h3>Viet Cuong</h3>
+                                <p>@webdev</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">
+                            <i class="fa-solid fa-plus"></i>
+                            Add profile
+                        </a>
+                        <ul class="function">
+                            <li>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <a href="#">Edit profile</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-gears"></i>
+                                <a href="#">Setting</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <a href="#">Account</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-question"></i>
+                                <a href="#">Help</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <a href="#">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="i-name">Dashboard</h3>
+
+        <div class="values">
+            <div class="value-box">
+                <i class="fa-solid fa-users"></i>
+                <div>
+                    <h3>1,803</h3>
+                    <span>Employees</span>
+                </div>
+            </div>
+            <div class="value-box">
+                <i class="fa-solid fa-mars"></i>
+                <div>
+                    <h3>1,002</h3>
+                    <span>Male</span>
+                </div>
+            </div>
+            <div class="value-box">
+                <i class="fa-solid fa-venus"></i>
+                <div>
+                    <h3>801</h3>
+                    <span>Female</span>
+                </div>
+            </div>
+            <div class="value-box">
+                <i class="fa-solid fa-toggle-on"></i>
+                <div>
+                    <h3>916</h3>
+                    <span>Active</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Position</td>
+                        <td>Status</td>
+                        <td>ID</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="person-description">
+                                <h5>Viet Cuong</h5>
+                                <p>cuong.ho1912820@hcmut.edu.vn</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Software Engineer</h5>
+                            <p>Web developer</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>1912820</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/hiep.png" alt="">
+                            <div class="person-description">
+                                <h5>Van Hiep</h5>
+                                <p>19521492@gm.uit.edu.vn</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Guard</h5>
+                            <p>Parking</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>19521492</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/quangnhat.jpg" alt="">
+                            <div class="person-description">
+                                <h5>Quang Nhat</h5>
+                                <p>quangnhat@tdtu.edu.vn</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Guard</h5>
+                            <p>Parking</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>19132387</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/thaisanh.jpg" alt="">
+                            <div class="person-description">
+                                <h5>Thai Sanh</h5>
+                                <p>thaisanh@ueh.edu.vn</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Guard</h5>
+                            <p>Parking</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>19130922</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/quanglong.jpg" alt="">
+                            <div class="person-description">
+                                <h5>Quang Long</h5>
+                                <p>qlong@ttn.edu.vn</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Guard</h5>
+                            <p>Parking</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>19138765</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/nhuttran.jpg" alt="">
+                            <div class="person-description">
+                                <h5>Tran Nhut</h5>
+                                <p>nhutclong@tdt.edu.vn</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Guard</h5>
+                            <p>Parking</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>19130023</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/thanhhien.jpg" alt="">
+                            <div class="person-description">
+                                <h5>Thanh Hien</h5>
+                                <p>hiennhoclong@tdt.edu.vn</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Guard</h5>
+                            <p>Parking</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>19563123</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/khiemle.jpg" alt="">
+                            <div class="person-description">
+                                <h5>Ba Khiem</h5>
+                                <p>khiemle@gm.uit.edu.vn</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Guard</h5>
+                            <p>Parking</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>19919034</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/baothang.jpg" alt="">
+                            <div class="person-description">
+                                <h5>Bao Thang</h5>
+                                <p>thangtruong@pnt.edu.vn</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Guard</h5>
+                            <p>Parking</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>19829002</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/hiep.png" alt="">
+                            <div class="person-description">
+                                <h5>Thanh Vu</h5>
+                                <p>lethanhvu@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Maintenance Staff</h5>
+                            <p>Camera</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>19829002</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="person">
+                            <img src="../admin/img/BritishCouncil_Logo.png" alt="">
+                            <div class="person-description">
+                                <h5>Cam Tu</h5>
+                                <p>camtu@ump.edu.vn</p>
+                            </div>
+                        </td>
+                        <td class="position">
+                            <h5>Health</h5>
+                            <p>Pharmacist</p>
+                        </td>
+                        <td class="status">
+                            <p class="active">Active</p>
+                        </td>
+                        <td class="id">
+                            <p>1912821</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="../admin/js/main.js"></script>
+</body>
+</html>

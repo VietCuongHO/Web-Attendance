@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vie-Cuog | WebDev</title>
+    <link rel="stylesheet" href="../admin/css/add.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Nunito+Sans:wght@400;600;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="../admin/img/logoBK.png" alt="">
+            <h2>HCMUT</h2>
+        </div>
+        <ul class="items">
+            <li><i class="fa-solid fa-gauge"></i><a href="../admin/dashboard.html">Dashboard</a></li>
+            <li><i class="fa-regular fa-user"></i><a href="../admin/staff.html">Staff List</a></li>
+            <li><i class="fa-regular fa-clock"></i><a href="../admin/attendance.html">Attendance</a></li>
+            <li><i class="fa-regular fa-file-lines"></i><a href="../admin/report.html">Attendance Report</a></li>
+        </ul>
+    </section>
+    
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+    
+            <div class="n2">
+                <div class="notification" onclick="toggleNotifi()">
+                    <div class="notification-icon">
+                        <i class="fa-solid fa-bell"></i>
+                        <span>17</span>
+                    </div>
+                    <div class="notification-box" id="list-notifi">
+                        <h3>Notifications <span>17</span></h3>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                        <div class="noti-item">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="noti-text">
+                                <h5>Viet Cuong</h5>
+                                <p>Welcome to Bach Khoa!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account" onclick="toggleAcc()">
+                    <div class="account-avatar">
+                        <img src="../admin/img/quinhon.jpg" alt="">
+                    </div>
+                    <div class="account-box" id="list-acc">
+                        <div class="profile">
+                            <img src="../admin/img/quinhon.jpg" alt="">
+                            <div class="info">
+                                <h3>Viet Cuong</h3>
+                                <p>@webdev</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">
+                            <i class="fa-solid fa-plus"></i>
+                            Add profile
+                        </a>
+                        <ul class="function">
+                            <li>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <a href="#">Edit profile</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-gears"></i>
+                                <a href="#">Setting</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <a href="#">Account</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-question"></i>
+                                <a href="#">Help</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <a href="#">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <h3 class="i-name">Staff List / Add New Staff</h3> 
+        <div class="board">
+            <h4>Add New Staff</h4>
+            <div class="input-container">
+                <div class="container-top">
+                    <div class="board-left">
+                        <form  class="long">
+                            <label for="name">Staff Name</label>
+                            <input type="text" name="name">
+                        </form>
+                        <div class="row">
+                            <form>
+                                <label for="id">Identification</label>
+                                <input type="text" name="id">
+                            </form>
+                            <form>
+                                <label for="gender">Gender</label>
+                                <input type="text" name="gender">
+                            </form>
+                        </div>
+                        <div class="row">
+                            <form>
+                                <label for="designation">Designation</label>
+                                <input type="text" name="designation">
+                            </form>
+                            <form>
+                                <label for="nationnality">Nationality</label>
+                                <input type="text" name="nationality">
+                            </form>
+                        </div>
+                        <form class="long">
+                            <label for="depart">Department</label>
+                            <input type="text" name="depart">
+                        </form>
+                    </div>
+                    <div class="board-right">
+                        <form>
+                            <label for="number">OGSP No.</label>
+                            <input type="text" name="number">
+                        </form>
+                        <form>
+                            <label for="date">OGSP Exp. Date</label>
+                            <input type="date" name="date" style="width: 180px">
+                        </form>
+                        <form>
+                            <label for="number">CIDB Reg. No.</label>
+                            <input type="text" name="number">
+                        </form>
+                        <form>
+                            <label for="date">CIDB Exp. Date</label>
+                            <input type="date" name="date" style="width: 180px">
+                        </form>
+                        <form>
+                            <label for="number">Safety Visa No.</label>
+                            <input type="text" name="number">
+                        </form>
+                    </div>
+                </div>
+                <div class="container-bottom">
+                    <div class="board-left">
+                        <div class="row">
+                            <form>
+                                <label for="medical">Medical</label>
+                                <input type="text" name="medical">
+                            </form>
+                            <form>
+                                <label for="vaccine">Vaccination Status</label>
+                                <input type="text" name="vaccine">
+                            </form>
+                        </div>
+                        <div class="row">
+                            <form>
+                                <label for="safety">Safety Induction</label>
+                                <input type="text" name="safety">
+                            </form>
+                            <form>
+                                <label for="date">Date Expired</label>
+                                <input type="date" name="date" style="width: 180px">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="board-right">
+                        <form>
+                            <label for="number">E-Vetting (CGSO)</label>
+                            <input type="text" name="number">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <div class="btn-save">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    <a href="#">Save</a>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <script src="../admin/js/main.js"></script>
+</body>
